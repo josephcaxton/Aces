@@ -8,10 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : NSObject <UIApplicationDelegate>{
+    
+    UIWindow *window;
+    UITabBarController *tabBarController;
+    NSThread *SecondThread;
+}
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
+@property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+@property (nonatomic, retain) NSThread *SecondThread;
 
-@property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

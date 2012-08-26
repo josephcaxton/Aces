@@ -8,27 +8,27 @@
 
 #import "AppDelegate.h"
 
-#import "FirstViewController.h"
 
-#import "SecondViewController.h"
 
 @implementation AppDelegate
 
-@synthesize window = _window;
-@synthesize tabBarController = _tabBarController;
+@synthesize window;
+@synthesize	tabBarController,SecondThread;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    UIViewController *viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController" bundle:nil];
-    UIViewController *viewController2 = [[SecondViewController alloc] initWithNibName:@"SecondViewController" bundle:nil];
-    self.tabBarController = [[UITabBarController alloc] init];
-    self.tabBarController.viewControllers = [NSArray arrayWithObjects:viewController1, viewController2, nil];
-    self.window.rootViewController = self.tabBarController;
-    [self.window makeKeyAndVisible];
+   // NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:tabBarController.viewControllers];
+    
+    //NSLog(@"Number of Controllers is %i",viewControllers.count);
+    
+    [window addSubview: tabBarController.view];
+    [window makeKeyAndVisible];
+
     return YES;
 }
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

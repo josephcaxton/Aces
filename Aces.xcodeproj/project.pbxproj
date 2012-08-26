@@ -15,6 +15,8 @@
 		7C3A1F7915EA4315002EFDB2 /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C3A1F7815EA4315002EFDB2 /* Twitter.png */; };
 		7C3A1F7B15EA43C3002EFDB2 /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C3A1F7A15EA43C3002EFDB2 /* Facebook.png */; };
 		7C3A1F7D15EA4443002EFDB2 /* TwitterFollow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C3A1F7C15EA4443002EFDB2 /* TwitterFollow.png */; };
+		7C3A1F8315EA49A9002EFDB2 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C3A1F8215EA49A9002EFDB2 /* Twitter.framework */; };
+		7C3A1F8615EA57CB002EFDB2 /* YouTubeList.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C3A1F8515EA57CA002EFDB2 /* YouTubeList.m */; };
 		7C5DFFD715D53F4D00804A8F /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5DFFD615D53F4D00804A8F /* Logo.png */; };
 		7C5DFFDA15D5415C00804A8F /* BlackBackGround_Iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C5DFFD915D5415C00804A8F /* BlackBackGround_Iphone.png */; };
 		7C9911CC15D4F7DA00ECE372 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C9911CB15D4F7DA00ECE372 /* CoreGraphics.framework */; };
@@ -33,7 +35,7 @@
 		7C99121615D4FFDD00ECE372 /* 79-medical-bag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C99121515D4FFDD00ECE372 /* 79-medical-bag.png */; };
 		7C99121A15D5004400ECE372 /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C99121915D5004400ECE372 /* Home.m */; };
 		7C99121D15D5006700ECE372 /* videos.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C99121C15D5006700ECE372 /* videos.m */; };
-		7C99122015D5007800ECE372 /* Youtube.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C99121F15D5007800ECE372 /* Youtube.m */; };
+		7C99122015D5007800ECE372 /* YoutubePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C99121F15D5007800ECE372 /* YoutubePlayer.m */; };
 		7C99122315D5009A00ECE372 /* Help.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C99122215D5009A00ECE372 /* Help.m */; };
 		7C99122915D50B4200ECE372 /* buy.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C99122815D50B4200ECE372 /* buy.png */; };
 		7C99122C15D50B9200ECE372 /* Buy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C99122B15D50B9200ECE372 /* Buy.m */; };
@@ -73,6 +75,9 @@
 		7C3A1F7815EA4315002EFDB2 /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
 		7C3A1F7A15EA43C3002EFDB2 /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
 		7C3A1F7C15EA4443002EFDB2 /* TwitterFollow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TwitterFollow.png; sourceTree = "<group>"; };
+		7C3A1F8215EA49A9002EFDB2 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		7C3A1F8415EA57CA002EFDB2 /* YouTubeList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeList.h; sourceTree = "<group>"; };
+		7C3A1F8515EA57CA002EFDB2 /* YouTubeList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeList.m; sourceTree = "<group>"; };
 		7C5DFFD615D53F4D00804A8F /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		7C5DFFD915D5415C00804A8F /* BlackBackGround_Iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlackBackGround_Iphone.png; sourceTree = "<group>"; };
 		7C9911C315D4F7DA00ECE372 /* Aces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aces.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,8 +118,8 @@
 		7C99121915D5004400ECE372 /* Home.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		7C99121B15D5006700ECE372 /* videos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = videos.h; sourceTree = "<group>"; };
 		7C99121C15D5006700ECE372 /* videos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = videos.m; sourceTree = "<group>"; };
-		7C99121E15D5007800ECE372 /* Youtube.h */ = {isa = PBXFileReference; fileEncoding = 4; path = Youtube.h; sourceTree = "<group>"; };
-		7C99121F15D5007800ECE372 /* Youtube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Youtube.m; sourceTree = "<group>"; };
+		7C99121E15D5007800ECE372 /* YoutubePlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubePlayer.h; sourceTree = "<group>"; };
+		7C99121F15D5007800ECE372 /* YoutubePlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubePlayer.m; sourceTree = "<group>"; };
 		7C99122115D5009A00ECE372 /* Help.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Help.h; sourceTree = "<group>"; };
 		7C99122215D5009A00ECE372 /* Help.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Help.m; sourceTree = "<group>"; };
 		7C99122415D500CF00ECE372 /* TabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBar.h; sourceTree = "<group>"; };
@@ -159,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3A1F8315EA49A9002EFDB2 /* Twitter.framework in Frameworks */,
 				7CF4D8D915D523A2000342FB /* UIKit.framework in Frameworks */,
 				7CF4D8D815D52396000342FB /* Foundation.framework in Frameworks */,
 				7C9911CC15D4F7DA00ECE372 /* CoreGraphics.framework in Frameworks */,
@@ -197,6 +203,7 @@
 		7C9911C615D4F7DA00ECE372 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7C3A1F8215EA49A9002EFDB2 /* Twitter.framework */,
 				7C9911C715D4F7DA00ECE372 /* UIKit.framework */,
 				7C9911C915D4F7DA00ECE372 /* Foundation.framework */,
 				7C9911CB15D4F7DA00ECE372 /* CoreGraphics.framework */,
@@ -285,8 +292,8 @@
 				7C99121915D5004400ECE372 /* Home.m */,
 				7C99121B15D5006700ECE372 /* videos.h */,
 				7C99121C15D5006700ECE372 /* videos.m */,
-				7C99121E15D5007800ECE372 /* Youtube.h */,
-				7C99121F15D5007800ECE372 /* Youtube.m */,
+				7C99121E15D5007800ECE372 /* YoutubePlayer.h */,
+				7C99121F15D5007800ECE372 /* YoutubePlayer.m */,
 				7C99122115D5009A00ECE372 /* Help.h */,
 				7C99122215D5009A00ECE372 /* Help.m */,
 				7C99122A15D50B9200ECE372 /* Buy.h */,
@@ -301,6 +308,8 @@
 				7CB6B53E15E90C2E005574EB /* WebViewInCell.m */,
 				7C3A1F7315EA3EF3002EFDB2 /* SocialMedia.h */,
 				7C3A1F7415EA3EF3002EFDB2 /* SocialMedia.m */,
+				7C3A1F8415EA57CA002EFDB2 /* YouTubeList.h */,
+				7C3A1F8515EA57CA002EFDB2 /* YouTubeList.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -456,12 +465,13 @@
 				7C9911D815D4F7DA00ECE372 /* AppDelegate.m in Sources */,
 				7C99121A15D5004400ECE372 /* Home.m in Sources */,
 				7C99121D15D5006700ECE372 /* videos.m in Sources */,
-				7C99122015D5007800ECE372 /* Youtube.m in Sources */,
+				7C99122015D5007800ECE372 /* YoutubePlayer.m in Sources */,
 				7C99122315D5009A00ECE372 /* Help.m in Sources */,
 				7C99122C15D50B9200ECE372 /* Buy.m in Sources */,
 				7CB6B52B15E8F011005574EB /* Africa.m in Sources */,
 				7CB6B53A15E8FC8C005574EB /* PdfReader.m in Sources */,
 				7C3A1F7515EA3EF3002EFDB2 /* SocialMedia.m in Sources */,
+				7C3A1F8615EA57CB002EFDB2 /* YouTubeList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

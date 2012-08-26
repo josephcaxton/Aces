@@ -7,13 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Twitter/Twitter.h>
+#import "AppDelegate.h"
+#import "YouTubeList.h"
 
 @interface SocialMedia : UITableViewController{
     
     NSMutableArray *ImageNames;
     NSMutableArray *TitleLists;
+     UIActivityIndicatorView * activityIndicator;
 }
 @property (nonatomic, retain) NSMutableArray *ImageNames;
-@property (nonatomic, retain) NSMutableArray *TitleLists;                                    
+@property (nonatomic, retain) NSMutableArray *TitleLists;
+@property (nonatomic, retain)  UIActivityIndicatorView * activityIndicator;
 
 @end

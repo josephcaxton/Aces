@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  Share.h
 //  Aces
 //
 //  Created by Joseph caxton-Idowu on 10/08/2012.
@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface YoutubePlayer : UIWebView  {
+    
+    
+}
 
+- (YoutubePlayer *)initWithStringAsURL:(NSString *)urlString frame:(CGRect)frame;
 @end

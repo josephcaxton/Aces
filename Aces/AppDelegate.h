@@ -13,11 +13,15 @@
     UIWindow *window;
     UITabBarController *tabBarController;
     NSThread *SecondThread;
+    NSString *NewsServerURL;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 @property (nonatomic, retain) NSThread *SecondThread;
+@property (nonatomic, retain) NSString *NewsServerURL;
 
-
+- (NSString *)applicationDocumentsDirectory;
+-(BOOL)isDeviceConnectedToInternet;
+- (BOOL)downloadFileIfUpdated:(NSString*)urlString:(NSString*)LocalFileLocation;
 @end

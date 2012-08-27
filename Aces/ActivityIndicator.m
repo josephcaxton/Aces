@@ -18,10 +18,10 @@
     if (self) {
         
 		//UIActivityIndicatorView *Activity = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(round((self.frame.size.width - 25) / 2),round((self.frame.size.height - 25) / 2),20,20)];
-		UIActivityIndicatorView *Activity = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(160,250,20,20)];
+		UIActivityIndicatorView *Activity = [[UIActivityIndicatorView alloc]initWithFrame:CGRectMake(160,220,20,20)];
 		Activity.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
 		
-		UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(180,250,100,20)];
+		UILabel *lbl = [[UILabel alloc] initWithFrame:CGRectMake(150,200,100,20)];
 		[lbl setText:@"loading....."];														 
 		lbl.backgroundColor = [UIColor clearColor];
 		

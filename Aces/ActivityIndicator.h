@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface ActivityIndicator : UIView {
+@interface ActivityIndicator : UIActivityIndicatorView {
 
 
 }

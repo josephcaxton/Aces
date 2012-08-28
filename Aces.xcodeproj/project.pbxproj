@@ -579,6 +579,7 @@
 		7C9911F015D4F7DA00ECE372 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Donia Narh (FPEVF2PQUN)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aces/Aces-Prefix.pch";
 				INFOPLIST_FILE = "Aces/Aces-Info.plist";
@@ -588,6 +589,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "D16769EF-19EC-40CB-AE22-6F67167EFA3A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -595,6 +597,7 @@
 		7C9911F115D4F7DA00ECE372 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Iniiche Ltd";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Aces/Aces-Prefix.pch";
 				INFOPLIST_FILE = "Aces/Aces-Info.plist";
@@ -604,6 +607,7 @@
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2B6CDD5A-8E6F-47E4-8A9F-C054DC523DF0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

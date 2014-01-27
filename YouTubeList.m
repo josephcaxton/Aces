@@ -15,133 +15,101 @@
 
 @implementation YouTubeList
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+      
+    
+    
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+   
 }
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return 1;
+    
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    
     return 1;
+    
+    
 }
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *) indexPath
 {
     
     
-    return 200.0;
+    return 140.0;
     
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *CellIdentifier = @"Cell"; 
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    YoutubePlayer *youTube = [[YoutubePlayer alloc] 
-                                initWithStringAsURL:@"http://www.youtube.com/channel/SWLHzF4gvGNn0" 
-                                frame:CGRectMake(100, 170, 120, 120)];
     
-    [cell.contentView addSubview:youTube];
+    // HTML to embed YouTube video
+    NSString *youTubeVideoHTML = @"<html><head>\
+    <body style=\"margin:0\">\
+    <embed id=\"yt\" src=\"%@\" type=\"application/x-shockwave-flash\" \
+    width=\"%0.0f\" height=\"%0.0f\"></embed>\
+    </body></html>";
+    
+    NSString *html = [NSString stringWithFormat:youTubeVideoHTML, @"http://www.youtube.com/watch?v=vZNh5Uw8mDw&list=UUytu2J8l5uhlygW92DWReig&index=2&feature=plcp" , 120.00, 120.00];
+    
+    UIWebView *youtube = [[UIWebView alloc]initWithFrame:CGRectMake(10, 10, 120, 120)];
+    
+    [youtube loadHTMLString:html baseURL:nil];
+    [cell addSubview:youtube];
+    
+    // Add a label
+    UILabel *Title = [[UILabel alloc] initWithFrame:CGRectMake(140, 40, 180, 40)];
+    Title.text =  @"Name of this video";
+    [cell addSubview:Title];
+    
+    // Don't know why this won't work
+    /*YoutubePlayer *youTube = [[YoutubePlayer alloc] 
+                              initWithStringAsURL:@"http://youtu.be/sYRTOTeD1rM" 
+                              frame:CGRectMake(0, 0, 120.00, 120.00)];
+    
+    
+    [self.view addSubview:youTube];*/
+    
     
     
     return cell;
+    
+    
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
-}
 
 @end

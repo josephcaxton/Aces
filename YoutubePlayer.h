@@ -10,7 +10,7 @@
 
 @interface YoutubePlayer : UIWebView  {
     
-    
+    //UIWebView *Video;
 }
 
 - (YoutubePlayer *)initWithStringAsURL:(NSString *)urlString frame:(CGRect)frame;

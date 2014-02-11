@@ -22,8 +22,11 @@
 {
     [super viewDidLoad];
     
-    UINavigationController *nav =self.navigationController;
-    nav.navigationBar.tintColor = [UIColor blackColor];
+     NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIColor whiteColor],NSBackgroundColorAttributeName, nil];
+    self.navigationController.navigationBar.titleTextAttributes = textAttributes;
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:57.0/255.0 green:67.0/255.0 blue:99.0/255.0 alpha:1]];
+   
+    
     
     self.navigationItem.title = @"Resources";
 
@@ -71,7 +74,7 @@
     
     else {
 		
-		numberOfRows = 5;
+		numberOfRows = 6;
     }
     
     return numberOfRows;
@@ -84,12 +87,13 @@
 {
     if (indexPath.section == 0){
         
-         return 52.0;
+         return 42.0;
     }
-    else{
-        
-    return 80.0;
+    else if (indexPath.row == 5){
+        return 120;
     }
+    
+    return 60.0;
 }
 
 
@@ -105,30 +109,56 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     if (indexPath.section == 0){
+        cell.backgroundColor = [UIColor colorWithRed:57.0/255.0 green:67.0/255.0 blue:99.0/255.0 alpha:0.8];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        UIFont *font = [UIFont fontWithName:@"Helvetica-Bold" size:18.0];
+        cell.textLabel.text = @"Aces Project";
         
-       cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png"]];
+        cell.textLabel.font = font;
         
     }
-    else {
+    else if (indexPath.row == 5){
+        
+         cell.backgroundColor = [UIColor colorWithRed:57.0/255.0 green:67.0/255.0 blue:99.0/255.0 alpha:1.0];
+    }
+    else  {
         
         
-        cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"cellback.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0]];
-        
+        //cell.backgroundView = [[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"cellback.png"] stretchableImageWithLeftCapWidth:0.0 topCapHeight:5.0]];
+        cell.backgroundColor = [UIColor colorWithRed:57.0/255.0 green:67.0/255.0 blue:99.0/255.0 alpha:0.5];
+
         NSString *ImageName = [[NSString alloc] initWithFormat:@"%@",[ImageNames objectAtIndex:indexPath.row]];
-        
+        UIImageView *imgview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
         UIImage* theImage = [UIImage imageNamed:ImageName];
+        imgview.image = theImage;
         cell.imageView.image = theImage;
         
         
         NSString *Title = [[NSString alloc] initWithFormat:@"%@",[TitleLists objectAtIndex:indexPath.row]];
-        cell.textLabel.text = Title;
-        cell.textLabel.backgroundColor = [UIColor clearColor];
+        UILabel *mylabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 0, 202, 40)];
+        mylabel.text = Title;
+        UIFont *Firstfont = [UIFont fontWithName:@"Helvetica" size:14.0];
+        [mylabel setFont:Firstfont];
+        //mylabel.font = Firstfont;
+        //cell.textLabel.text = Title;
+        //cell.textLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:mylabel];
                            
         NSString *SubTitle = [[NSString alloc] initWithFormat:@"%@",[SubTitleLists objectAtIndex:indexPath.row]];
-        cell.detailTextLabel.text = SubTitle;
-        cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        UILabel *detaillabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 20, 202, 40)];
+        detaillabel.text = SubTitle;
+        UIFont *Secondfont = [UIFont fontWithName:@"Helvetica" size:10.0];
+        [detaillabel setFont:Secondfont];
+
+        //cell.detailTextLabel.text = SubTitle;
+        //cell.detailTextLabel.backgroundColor = [UIColor clearColor];
+        [cell.contentView addSubview:detaillabel];
         
-        UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"whiteArrow.png"]];
+        NSString *arrowName = @"whiteArrow.png";
+        UIImageView* arrowView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+         UIImage* arrowImage = [UIImage imageNamed:arrowName];
+        arrowView.image  = arrowImage;
+        
         cell.accessoryView = arrowView;
 
     }

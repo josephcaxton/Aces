@@ -22,7 +22,7 @@
     
     //NSLog(@"Number of Controllers is %i",viewControllers.count);
     
-    NewsServerURL = @"http://stage.learnerscloud.com/iosStream/NewsFeed.xml";
+    NewsServerURL = @"http://NewsFeed.xml";
     
     [window addSubview: tabBarController.view];
     [window makeKeyAndVisible];
@@ -40,7 +40,8 @@
 //Return True is file does not exist in device -- so download from server;
 // Return True if the file exist but version is defferent--- So we need to download the file;
 // Return false if the file is same version --- so don't download;
-- (BOOL)downloadFileIfUpdated:(NSString*)urlString:(NSString*)LocalFileLocation {  
+- (BOOL)downloadFileIfUpdated:(NSString*)urlString
+                 :(NSString*)LocalFileLocation {
     
     //DLog(@"Downloading HTTP header from: %@", urlString);
     

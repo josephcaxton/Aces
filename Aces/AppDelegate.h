@@ -23,5 +23,6 @@
 
 - (NSString *)applicationDocumentsDirectory;
 -(BOOL)isDeviceConnectedToInternet;
-- (BOOL)downloadFileIfUpdated:(NSString*)urlString:(NSString*)LocalFileLocation;
+- (BOOL)downloadFileIfUpdated:(NSString*)urlString
+                            :(NSString*)LocalFileLocation;
 @end
